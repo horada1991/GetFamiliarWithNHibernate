@@ -21,5 +21,16 @@ namespace TryNHibernate
                 }
             }
         }
+
+        public Character GetCharacterByName(string name)
+        {
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                var result = session.QueryOver<Character>()
+                    .Where(x => x.Name == name)
+                    .SingleOrDefault();
+                return result ?? new Character();
+            }
+        }
     }
 }
