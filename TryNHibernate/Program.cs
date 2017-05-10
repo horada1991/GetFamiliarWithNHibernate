@@ -17,7 +17,7 @@ namespace TryNHibernate
 
             CharacterRepository repository = new CharacterRepository();
 
-            var cerianth = new Character { Name = "Cerianth", HealthPoints = 500, Mana = 100, Profession = "Hunter" };
+            var cerianth = new Character { Name = "Cerianth3", HealthPoints = 500, Mana = 100, Profession = "Hunter" };
             repository.Add(cerianth);
 
 
@@ -30,7 +30,7 @@ namespace TryNHibernate
             var cfg = new Configuration();
             cfg.Configure();
             cfg.AddAssembly(typeof(Character).Assembly);
-            new SchemaExport(cfg).Execute(true, true, false);
+            new SchemaUpdate(cfg).Execute(true, true);
         }
     }
 }

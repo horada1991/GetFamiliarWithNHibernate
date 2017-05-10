@@ -11,6 +11,7 @@
     <property name="HealthPoints" />
     <property name="Mana" />
     <property name="Profession" />
+    <property name="Gender" />
   </class>
 
 </hibernate-mapping>

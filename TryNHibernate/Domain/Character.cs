@@ -13,6 +13,7 @@ namespace TryNHibernate.Domain
         public virtual int HealthPoints { get; set; }
         public virtual int Mana { get; set; }
         public virtual string Profession { get; set; }
+        public virtual string Gender { get; set; }
     }
 
 }
