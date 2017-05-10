@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="TryNHibernate"
+                   namespace="TryNHibernate.Domain">
+
+  <class name="Character">
+    <id name="Id">
+      <generator class="guid" />
+    </id>
+    <property name="Name" />
+    <property name="HealthPoints" />
+    <property name="Mana" />
+    <property name="Profession" />
+  </class>
+
+</hibernate-mapping>
