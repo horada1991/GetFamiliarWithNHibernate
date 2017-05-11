@@ -44,5 +44,17 @@ namespace TryNHibernate
                 }
             }
         }
+
+        public void Delete(Character character)
+        {
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    session.Delete(character);
+                    transaction.Commit();
+                }
+            }
+        }
     }
 }

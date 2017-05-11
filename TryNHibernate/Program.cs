@@ -28,6 +28,9 @@ namespace TryNHibernate
             character.Name = "Kaleid";
             repository.Update(character);
 
+            //Delete
+            repository.Delete(character);
+
             Console.ReadKey();
         }
 
