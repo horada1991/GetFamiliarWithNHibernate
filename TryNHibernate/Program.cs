@@ -22,7 +22,11 @@ namespace TryNHibernate
             repository.Add(cerianth);
 
             //Read
-            var mike = repository.GetCharacterByName("Cerianth4");
+            var character = repository.GetCharacterByName("Cerianth4");
+
+            //Update
+            character.Name = "Kaleid";
+            repository.Update(character);
 
             Console.ReadKey();
         }

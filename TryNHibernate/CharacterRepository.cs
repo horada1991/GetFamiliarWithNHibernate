@@ -32,5 +32,17 @@ namespace TryNHibernate
                 return result ?? new Character();
             }
         }
+
+        public void Update(Character character)
+        {
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    session.Update(character);
+                    transaction.Commit();
+                }
+            }
+        }
     }
 }
